@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  express:
+    hostname: express
+    build:
+      context: ./backend
+      dockerfile: docker/backend/Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/code
